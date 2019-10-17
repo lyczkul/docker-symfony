@@ -1,0 +1,4 @@
+172.23.0.1 - - [17/Oct/2019:17:21:55 +0000] "GET / HTTP/1.1" 500 31121 "-" "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_14_0) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/77.0.3865.90 Safari/537.36"
+172.23.0.1 - - [17/Oct/2019:17:21:57 +0000] "GET /favicon.ico HTTP/1.1" 500 31121 "http://symfony.localhost/" "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_14_0) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/77.0.3865.90 Safari/537.36"
+172.23.0.1 - - [17/Oct/2019:17:22:50 +0000] "GET / HTTP/1.1" 200 812 "-" "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_14_0) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/77.0.3865.90 Safari/537.36"
+172.23.0.1 - - [17/Oct/2019:17:22:57 +0000] "GET /favicon.ico HTTP/1.1" 404 39470 "http://symfony.localhost/" "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_14_0) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/77.0.3865.90 Safari/537.36"

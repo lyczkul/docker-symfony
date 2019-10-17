@@ -15,7 +15,7 @@ services:
         ports:
             - "9000:9001"
         volumes:
-            - ./ucreate:/var/www/symfony:cached
+            - ./symfony:/var/www/symfony:cached
             - ./logs/symfony:/var/www/symfony/var/log:cached
         links:
             - db
@@ -28,13 +28,16 @@ services:
         volumes:
             - ./logs/nginx:/var/log/nginx:cached
             - ./symfony:/var/www/symfony:cached
-    elk:
-        image: willdurand/elk
+    redis:
+        image: 'bitnami/redis:5.0'
+        environment:
+          # ALLOW_EMPTY_PASSWORD is recommended only for development.
+          - ALLOW_EMPTY_PASSWORD=yes
+          - REDIS_DISABLE_COMMANDS=FLUSHDB,FLUSHALL
         ports:
-            - "81:80"
+          - '6379:6379'
         volumes:
-            - ./elk/logstash:/etc/logstash:cached
-            - ./elk/logstash/patterns:/opt/logstash/patterns:cached
-            - ./logs/symfony:/var/www/symfony/var/log:cached
-            - ./logs/nginx:/var/log/nginx:cached
-
+          - 'redis_data:/bitnami/redis/data'
+volumes:
+  redis_data:
+    driver: local
