@@ -19,6 +19,7 @@ services:
             - ./logs/symfony:/var/www/symfony/var/log:cached
         links:
             - db
+            - redis
     nginx:
         build: ./nginx
         ports:
