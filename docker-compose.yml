@@ -7,7 +7,7 @@ services:
             - "3306:3306"
         environment:
             MYSQL_ROOT_PASSWORD: root
-            MYSQL_DATABASE: ucreate
+            MYSQL_DATABASE: symfony
             MYSQL_USER: root
             MYSQL_PASSWORD: root
     php:
@@ -32,7 +32,6 @@ services:
     redis:
         image: 'bitnami/redis:5.0'
         environment:
-          # ALLOW_EMPTY_PASSWORD is recommended only for development.
           - ALLOW_EMPTY_PASSWORD=yes
           - REDIS_DISABLE_COMMANDS=FLUSHDB,FLUSHALL
         ports:
